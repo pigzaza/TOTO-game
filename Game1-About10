@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Dec 16 20:19:08 2018
+ 
+@author: pigzaza
+"""
+import random
+import tkinter
+import os
+ 
+def clear():os.system('clear')
+ 
+print('\n\n____Hello everyone, this is a game for ToTo____')
+name=input('\nwhat\'s your name:')
+print('Now I know You are',name,'\n')
+x=0
+for i in range(10):
+    a= random.randint(1,10)
+    print(a,'+ ? = 10\n')
+    b=int(input('\033[0;30;31m\tPLease input the answer ^.^ -->\033[0m'))
+    ans=10-b
+    if ans==a:
+        clear()
+        print('\n\nvery good!!!!!')
+        print('__________________\n\n\n')
+        x+=10
+        
+        print('\033[1;31;46m\t总分\033[0m',x)
+        print('还有',9-i,'个题目\n\n')
+         
+    else:
+        clear()
+        print('\n\nIt is not right  ~.~')
+         
+        print('\033[1;31;46m\t总分\033[0m',x)
+        print('还有',9-i,'个题目\n\n')
+        i+=1
+         
+print('\n\n###恭喜，得到了',x,'!!!###\n\n\n    bye bye~%s!\n\n\n',name)
+     
+ 
